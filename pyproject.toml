@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forkman"
+version = "0.1.0"
+description = "Maintain a fork as ancestry-based Git patch branches"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0"]
+
+[project.scripts]
+forkman = "forkman.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["forkman*"]
